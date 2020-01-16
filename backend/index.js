@@ -13,7 +13,7 @@ app.use(express.json());
 // Body: request.body (Dados para criação ou alteração de um registro)
 app.post("/user", (request, response) => {
   console.log(request.body);
-  return response.json({ mensage: "Hello World" });
+  return response.json({ mensage: "Hello Week 10" });
 });
 
 /*#Usando Route Params#
