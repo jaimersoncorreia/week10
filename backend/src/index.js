@@ -6,11 +6,9 @@ const app = express();
 
 const { login, senha, banco } = require("./acesso");
 
-console.log(login, senha, banco);
-
 mongoose.connect(
   `mongodb+srv://${login}:${senha}@cluster0-umvxo.mongodb.net/${banco}?retryWrites=true&w=majority`,
-  { useNewUrlParser: true, useUnifiedTopology: true }
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
 );
 
 app.use(express.json());
