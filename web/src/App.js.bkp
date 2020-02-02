@@ -1,0 +1,30 @@
+import React, { useState } from "react";
+/*  
+  Componente:
+    função que retorna algo
+    1ª Letra Maiúscula
+    1 arquivo/Componente
+  Propriedade:
+    atributo
+    variável
+  Estado:
+    Informação que o Componente vai manipular
+    função é criado no próprio Componente
+    Conceito de Imutabilidade
+
+*/
+function App() {
+  const [counter, setCounter] = useState(0);
+
+  function incrementCounter() {
+    setCounter(counter + 1);
+  }
+  return (
+    <>
+      <h1>Contador: {counter}</h1>
+      <button onClick={incrementCounter}>Incrementar</button>
+    </>
+  );
+}
+
+export default App;
